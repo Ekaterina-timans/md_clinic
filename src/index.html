@@ -1,11 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.less">
     <title>Vesta</title>
 </head>
 <body>
-    
+    <div class="application" id="application">
+        <header class="application__header">
+            <p class="application__number">+7(812) 241-13-07</p>
+            <img src="images/logo.svg" alt="Logo" width="161" height="38">
+            <div class="application__menu">
+                <input type="checkbox" id="application__menu-toggle" class="application__menu-toggle" hidden>
+                <label for="application__menu-toggle" class="application__hamburger">
+                    <div class="application__bar"></div>
+                    <div class="application__bar"></div>
+                    <div class="application__bar"></div>
+                </label>
+                <div class="application__offcanvas">
+                    <label for="application__menu-toggle" class="application__close">&times;</label>
+                    <nav>
+                        <a href="#application">Заявка на расчет стоимости кухни</a>
+                        <a href="#stocks">Акции</a>
+                        <a href="#gallery">Галерея</a>
+                        <a href="#catalog">Каталог</a>
+                        <a href="#advantages">Преимущества</a>
+                        <a href="#reviews">Отзывы</a>
+                        <a href="#questions">Заказать звонок</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="application__forma">
+            <p class="application__title">Оставьте заявку на бесплатный расчет стоимости кухни</p>
+            <div class="application__fio">
+                <label for="application__fio-input">Ф.И.О.</label>
+                <input id="application__fio-input" type="text">
+            </div>
+            <div class="application__email">
+                <label for="application__email-input">email</label>
+                <input id="application__email-input" type="email">
+            </div>
+            <button class="application__button">Рассчитать стоимость</button>
+        </div>
+    </div>
+
+    <div class="stocks" id="stocks">
+
+    </div>
+
+    <div class="gallery" id="gallery">
+
+    </div>
+
+    <div class="catalog" id="catalog">
+
+    </div>
+
+    <div class="advantages" id="advantages">
+
+    </div>
+
+    <div class="reviews" id="reviews">
+
+    </div>
+
+    <div class="questions" id="questions">
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer__container"></div>
+            <div class="footer__number">
+                <img src="images/logo.svg" alt="Logo" width="151" height="34">
+                <div>
+                    <p>По всем вопросам:</p>
+                    <p>+7(812) 241-13-07</p>
+                </div>
+            </div>
+            <div class="footer__content">
+                <p>© Все права защищены. Использование материалов с сайта только с согласия правообладателя.</p>
+            </div>
+        </div>
+        <div class="footer__menu">
+            <a href="#stocks">Акции</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#catalog">Каталог</a>
+            <a href="#reviews">Отзывы</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

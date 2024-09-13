@@ -4,7 +4,6 @@ const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 
-// Путь к файлам
 const paths = {
     less: {
         src: 'src/**/*.less',
