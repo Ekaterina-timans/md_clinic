@@ -1,0 +1,20 @@
+{
+  "name": "vesta",
+  "version": "1.0.0",
+  "description": "Layout of the kitchen making website",
+  "main": "script.js",
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^5.0.0"
+  }
+}
