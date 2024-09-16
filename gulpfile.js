@@ -7,11 +7,11 @@ const browserSync = require('browser-sync').create();
 const paths = {
     less: {
         src: 'src/**/*.less',
-        dest: 'dist/css/'
+        dest: 'dist/'
     },
     js: {
         src: 'src/**/*.js',
-        dest: 'dist/js/'
+        dest: 'dist/'
     },
     images: {
         src: 'src/images/**/*',
@@ -39,7 +39,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('images', function() {
-    return gulp.src(paths.images.src)
+    return gulp.src(paths.images.src, {encoding: false})
         .pipe(gulp.dest(paths.images.dest));
 });
 
