@@ -197,6 +197,176 @@ button {
     }
 }
 
+.stocks {
+    width: 100%;
+    min-height: 900px;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 61px 45px 137px;
+
+    .stocks__content {
+        max-width: 1101px;
+        display: flex;
+        flex-direction: column;
+
+        .stocks__title {
+            font-size: 25px;
+            color: var(--color-black);
+            text-transform: uppercase;
+            margin: 0 0 65px 150px;
+        }
+
+        .stocks__description {
+            background-color: var(--color-forma);
+            width: 100%;
+            height: 152px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                max-width: 650px;
+                text-align: center;
+            }
+
+            .stocks__text {
+                text-transform: uppercase;
+            }
+        }
+
+        .stocks__container {
+            display: flex;
+            flex-wrap: wrap;
+
+            .stocks__card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .stocks__price {
+                    position: relative;
+                    background-color: var(--color-gray);
+                    box-shadow: var(--color-shadow);
+                    width: 206px;
+                    height: 34px;
+                    text-align: center;
+                }
+
+                .stocks__dash {
+                    position: absolute;
+                    margin-top: 383px;
+                }
+                
+                .stocks__price-stock {
+                    box-shadow: var(--color-shadow);
+                    background-color: var(--color-red);
+                    width: 206px;
+                    height: 42px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: start;
+                    margin-left: -45px;
+                }
+            }
+        }
+    }
+}
+
+.gallery {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 900px;
+    background: url(images/kitchen-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: var(--color-gallery);
+    }
+
+    .gallery__content {
+        z-index: 1;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+
+        .gallery__title {
+            margin-top: 45px;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+
+        .gallery__carousel {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 51px;
+
+            .gallery__sliders {
+                box-shadow: var(--color-shadow);
+                display: flex;
+                overflow: hidden;
+                width: 565px;
+                height: 635px;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    display: block;
+                    transition: opacity 0.5s ease-in-out;
+
+                    &.hidden {
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                }
+            }
+
+            .gallery__btn-left,
+            .gallery__btn-right {
+                border: none;
+                background: none;
+                cursor: pointer;
+
+                &[disabled] {
+                    cursor: not-allowed;
+                    opacity: 0.5;
+                }
+            }
+
+            .gallery__btn-left {
+                margin-right: 48px;
+            }
+            
+            .gallery__btn-right {
+                margin-left: 48px;
+            }
+        }
+
+        .gallery__pagination {
+            text-align: center;
+            margin-top: 40px;
+        }
+    }
+}
+
 .footer {
     width: 100%;
     height: 367px;
