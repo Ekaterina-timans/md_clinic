@@ -97,7 +97,7 @@ button {
             }
         }
 
-        .application__menu-toggle:checked~.application__offcanvas {
+        .application__menu-toggle:checked ~ .application__offcanvas {
             right: 0;
         }
 
@@ -181,7 +181,7 @@ button {
         .application__fio {
             margin-bottom: 13px;
         }
-
+        
         .application__email {
             margin-bottom: 47px;
         }
@@ -195,6 +195,13 @@ button {
             box-shadow: var(--color-shadow);
         }
     }
+}
+
+.application__button:hover,
+.catalog__button:hover,
+.questions__button:hover {
+    transform: scale(1.05);
+    background-color: var(--color-button);
 }
 
 .stocks {
@@ -364,6 +371,28 @@ button {
             text-align: center;
             margin-top: 40px;
         }
+    }
+}
+
+.reviews__pagination,
+.stocks__pagination {
+    display: none;
+}
+
+.gallery__pagination .dot,
+.reviews__pagination .dot,
+.stocks__pagination .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border: 3px solid var(--color-white);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &.active {
+        background-color: var(--color-white);
     }
 }
 
@@ -588,6 +617,7 @@ button {
                             display: -webkit-box;
                             -webkit-box-orient: vertical;
                             -webkit-line-clamp: 12;
+                            line-clamp: 12;
                             max-height: 370px;
                         }
                     }
@@ -700,7 +730,7 @@ button {
             }
         }
     }
-
+    
     .footer__menu {
         flex: 1;
         display: flex;
@@ -711,6 +741,593 @@ button {
 
         a {
             text-decoration: none;
+        }
+    }
+}
+
+@media (max-width: 1112px) {
+    .stocks {
+        padding-inline: 0;
+
+        .stocks__content {
+            width: 100%;
+
+            .stocks__container {
+                justify-content: center;
+                gap: 35px 45px;
+            }
+        }
+    }
+
+    .reviews .reviews__container .reviews__content {
+        padding-left: 15px;
+    }
+
+    .reviews .reviews__images {
+        padding-inline: 15px 10px;
+
+        .reviews__images-container {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .application .application__header {
+        padding-inline: 50px;
+    }
+
+    .application .application__forma {
+        top: 50%;
+        left: 50%;
+    }
+
+    .gallery .gallery__content {
+        width: 90%;
+    }
+
+    .catalog .catalog__container,
+    .catalog .catalog__container .catalog__content {
+        width: 100%;
+    }
+
+    .catalog .catalog__container .catalog__content img {
+        width: auto;
+    }
+
+    .catalog__circle {
+        display: none;
+    }
+
+    .reviews .reviews__container {
+        width: 90%;
+
+        .reviews__content {
+            padding-left: 65px;
+        }
+    }
+
+    .reviews .reviews__btn {
+        margin-right: 35px;
+    }
+
+    .reviews .reviews__images {
+        display: none;
+    }
+
+    .advantages {
+        min-height: 400px;
+
+        .advantages__content {
+            .advantages__title {
+                margin: 40px 0 45px 50px;
+            }
+    
+            .advantages__items {
+                justify-content: space-evenly;
+                gap: 40px 20px;
+                padding-bottom: 15px;
+    
+                .advantages__item {
+                    max-width: 35%;
+    
+                    img {
+                        width: 100px;
+                        height: 100px;
+                    }
+    
+                    p {
+                        font-size: 20px;
+                        margin-top: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .application .application__forma {
+        width: 334px;
+        height: 528px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .application__title,
+        .application__fio input,
+        .application__email input {
+            margin-bottom: 58px;
+        }
+
+        .application__title {
+            width: 80%;
+        }
+
+        .application__fio,
+        .application__email {
+            margin-bottom: 0;
+
+            label {
+                display: none;
+            }
+
+            input {
+                width: 281px;
+                height: 54px;
+            }
+        }
+    }
+
+    .gallery .gallery__content .gallery__carousel .gallery__btn-left {
+        margin-right: 20px;
+    }
+
+    .gallery .gallery__content .gallery__carousel .gallery__btn-right {
+        margin-left: 20px;
+    }
+
+    .catalog {
+        height: 932px;
+
+        .catalog__container {
+            width: 100%;
+
+            .catalog__title {
+                margin: 46px 0 80px 50px;
+            }
+
+            .catalog__content {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .catalog__application {
+                    left: 50%;
+                    top: 38%;
+                    transform: translate(-50%, -50%);
+
+                    .catalog__application-title {
+                        margin: 36px 0 27px;
+                    }
+
+                    .catalog__application-text {
+                        margin-bottom: 70px;
+                    }
+
+                    .catalog__fio label,
+                    .catalog__number label {
+                        display: none;
+                    }
+
+                    .catalog__fio input,
+                    .catalog__number input {
+                        width: 281px;
+                        height: 54px;
+                        margin-bottom: 50px;
+                    }
+
+                    .catalog__number {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .reviews .reviews__container .reviews__content {
+        padding-left: 15px;
+    }
+
+    .reviews .reviews__btn {
+        margin-right: 15px;
+    }
+
+    .footer .footer__container .footer__number {
+        margin-bottom: 130px;
+    }
+}
+
+@media (max-width: 580px) {
+    .application .application__header {
+        padding-inline: 34px;
+
+        img {
+            order: 1;
+            width: 106px;
+            height: 29px;
+        }
+
+        .application__number {
+            order: 2;
+        }
+
+        .application__menu {
+            order: 3;
+
+            .application__hamburger {
+                .application__bar {
+                    width: 41px;
+                }
+            }
+        }
+    }
+
+    .stocks {
+        height: 932px;
+        background-image: url(images/bg1.jpg), url(images/bg2.jpg);
+        background-size: contain;
+        background-position: top center, bottom center;
+        background-repeat: no-repeat, no-repeat;
+        padding: 0;
+
+        .stocks__content {
+            width: 100%;
+            height: 100%;
+            align-items: center;
+
+            .stocks__title {
+                margin: 24px 0 0 -180px;
+            }
+
+            .stocks__block {
+                position: relative;
+                width: 100%;
+                height: 622px;
+                background-color: var(--color-red);
+                margin-top: 37px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: end;
+
+                .stocks__description {
+                    position: absolute;
+                    height: 142px;
+                    width: 100%;
+                    top: 0;
+                    padding: 15px;
+                    z-index: 1;
+                }
+
+                .stocks__container {
+                    height: 517px;
+                    width: 100%;
+                    overflow: hidden;
+                    position: relative;
+                    margin-bottom: 10px;
+
+                    .stocks__card {
+                        position: absolute;
+                        display: block;
+                        transition: opacity 0.5s ease-in-out;
+
+                        &.hidden {
+                            opacity: 0;
+                            pointer-events: none;
+                        }
+
+                        .stocks__price,
+                        .stocks__dash,
+                        .stocks__price-stock {
+                            display: none;
+                        }
+                    }
+
+                    .stocks__card,
+                    .stocks__card img {
+                        width: 100%;
+                        height: 100%;
+                        max-width: 480px;
+                    }
+                }
+
+                .stocks__pagination {
+                    display: block;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .gallery {
+        max-height: 932px;
+        background: url(images/background-gallery.jpg);
+
+        &::before {
+            display: none;
+        }
+
+        .gallery__content {
+            width: 100%;
+
+            .gallery__title {
+                font-size: 25px;
+                margin: 39px 0 0 50px;
+            }
+
+            .gallery__carousel {
+                margin-top: 79px;
+                padding-inline: 23px;
+
+                button {
+                    display: none;
+                }
+
+                .gallery__sliders img {
+                    display: block;
+                    width: 100%;
+                    height: 650px;
+                }
+            }
+        }
+    }
+
+    .advantages {
+        height: 620px;
+
+        .advantages__content {
+            width: 100%;
+            padding: 25px;
+
+            .advantages__title {
+                font-size: 25px;
+                color: var(--color-gray);
+            }
+        }
+    }
+
+    .reviews {
+        min-height: 932px;
+        background: url(images/reviews-photo1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+
+        button.reviews__btn,
+        .reviews__container .reviews__content .reviews__slide .reviews__gallery,
+        .reviews__images {
+            display: none;
+        }
+
+        .reviews__container,
+        .reviews__container .reviews__content {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            box-shadow: none;
+            margin: 0;
+            padding: 0;
+
+            .reviews__title {
+                margin: 51px 0 15px 50px;
+                color: var(--color-gray);
+            }
+
+            .reviews__slide .reviews__feedback {
+                width: 100%;
+                height: 782px;
+                background: rgba(0, 0, 0, 0.50);
+                flex-direction: column;
+                align-items: center;
+    
+                .reviews__main {
+                    width: 100%;
+                    max-width: 431px;
+                    height: 432px;
+                    margin: 55px 0 24px;
+                }
+    
+                .reviews__block {
+                    width: 90%;
+                    margin-inline: 30px 10px;
+    
+                    p {
+                        margin-bottom: 1px;
+                    }
+    
+                    .reviews__header {
+                        display: flex;
+                        gap: 25px;
+                        margin-bottom: 10px;
+    
+                        img {
+                            width: 79px;
+                            height: 67px;
+                        }
+                    }
+    
+                    .reviews__text {
+                        -webkit-line-clamp: 4;
+                        line-clamp: 4;
+                    }
+                }
+            }
+        }
+
+        .reviews__pagination {
+            display: block;
+            position: absolute;
+            left: 47%;
+            margin-top: 840px;
+        }
+    }
+
+    .questions {
+        min-height: 531px;
+        background: url(images/min-questions.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        .questions__content {
+            .questions__title {
+                font-size: 25px;
+            }
+    
+            .questions__button {
+                width: 281px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .footer {
+        .footer__container {
+            padding: 29px 10px 29px 26px;
+    
+            .footer__number {
+                gap: 15px;
+                margin-bottom: 180px;
+    
+                img {
+                    width: 100px;
+                }
+            }
+    
+            .footer__number p,
+            .footer__content p {
+                font-size: 15px;
+            }
+        }
+
+        .footer__menu {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .application .application__header {
+        padding-inline: 15px;
+
+        img {
+            width: 80px;
+        }
+
+        .application__number {
+            font-size: 18px;
+        }
+
+        .application__menu {
+            width: 35px;
+
+            .application__offcanvas {
+                width: 200px;
+
+                nav a {
+                    padding: 10px 10px;
+                }
+            }
+        }
+    }
+
+    .gallery .gallery__content .gallery__carousel {
+        padding-inline: 0;
+    }
+
+    .advantages .advantages__content {
+        padding-inline: 5px;
+    }
+
+    .stocks .stocks__content .stocks__title {
+        margin-top: 20px;
+    }
+
+    .stocks .stocks__content .stocks__title,
+    .gallery .gallery__content .gallery__title,
+    .catalog .catalog__container .catalog__title,
+    .advantages .advantages__content .advantages__title,
+    .reviews .reviews__container .reviews__content .reviews__title {
+        text-align: center;
+        margin-inline: 5px;
+    }
+
+    .catalog .catalog__container {
+        .catalog__content img {
+            height: 330px;
+        }
+
+        .catalog__content .catalog__application {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .application {
+        overflow-x: hidden;
+
+        .application__header {
+            padding-inline: 8px;
+        }
+
+        .application__forma {
+            width: 100%;
+        }
+    }
+
+    .application .application__forma .application__fio input,
+    .application .application__forma .application__email input,
+    .application .application__forma .application__button,
+    .catalog .catalog__container .catalog__content .catalog__application .catalog__fio input,
+    .catalog .catalog__container .catalog__content .catalog__application .catalog__number input,
+    .catalog .catalog__container .catalog__content .catalog__application .catalog__button,
+    .questions .questions__content .questions__button {
+        width: 250px;
+    }
+
+    .application .application__forma .application__fio input,
+    .application .application__forma .application__email input {
+        height: 45px;
+    }
+
+    .application .application__forma .application__button,
+    .catalog .catalog__container .catalog__content .catalog__application .catalog__button,
+    .questions .questions__content .questions__button {
+        height: 60px;
+    }
+
+    .gallery .gallery__content .gallery__carousel .gallery__sliders {
+        height: 500px;
+    }
+
+    .catalog .catalog__container .catalog__content .catalog__application .catalog__application-text {
+        margin-bottom: 40px;
+    }
+
+    .advantages .advantages__content .advantages__items {
+        justify-content: space-between;
+        gap: 40px 10px;
+        padding-left: 45px;
+
+        .advantages__item {
+            min-width: 38%;
         }
     }
 }
