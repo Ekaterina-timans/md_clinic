@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.less">
+    <link rel="stylesheet" href="style.css">
     <title>Vesta</title>
 </head>
 <body>
@@ -105,12 +105,12 @@
                     <p class="catalog__application-title">Получите полный каталог</p>
                     <p class="catalog__application-text">Мы пришлём вам полный каталог лучших кухонь <span>vesta</span> в течении 3-х минут</p>
                     <div class="catalog__fio">
-                        <label for="">Ф.И.О</label>
-                        <input type="text">
+                        <label for="catalog__fio-input">Ф.И.О</label>
+                        <input id="catalog__fio-input" type="text">
                     </div>
                     <div class="catalog__number">
-                        <label for="">number</label>
-                        <input type="tel" class="catalog__input">
+                        <label for="catalog__number-input">number</label>
+                        <input id="catalog__number-input" class="catalog__input" type="tel">
                     </div>
                     <button class="catalog__button">Получить</button>
                 </div>
@@ -143,11 +143,73 @@
     </div>
 
     <div class="reviews" id="reviews">
-
+        <div class="reviews__container">
+            <div class="reviews__content">
+                <p class="reviews__title">Отзывы</p>
+                <div class="reviews__slide" id="slide1">
+                    <div class="reviews__feedback">
+                        <img class="reviews__main" src="images/reviews-photo1.jpg" alt="Картинка кухни" width="350" height="550">
+                        <div class="reviews__block">
+                            <div class="reviews__header">
+                                <img src="images/avatar1.jpg" alt="Аватар пользователя" width="120" height="100">
+                                <div>
+                                    <p class="reviews__name">Олег Решетников</p>
+                                    <p>г.Тюмень</p>
+                                </div>
+                            </div>
+                            <p class="reviews__text">
+                                Работой доволен, кухню изготовили довольно быстро, качественно, 
+                                нареканий нет ни в чем, все этапы выполнены в срок. Сервис отличный, 
+                                смс-информирование хорошо налажено, персонал профессиональный, вежливый, ненадоедливый.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="reviews__gallery">
+                        <img src="images/reviews-mini-photo1.jpg" alt="Картинка кухни" width="140" height="120">
+                        <img src="images/reviews-mini-photo2.jpg" alt="Картинка кухни" width="140" height="120">
+                        <img src="images/reviews-mini-photo3.jpg" alt="Картинка кухни" width="140" height="120">
+                    </div>
+                </div>
+                <div class="reviews__slide" id="slide2">
+                    <div class="reviews__feedback">
+                        <img class="reviews__main" src="images/reviews-photo2.jpg" alt="Картинка кухни" width="350" height="550">
+                        <div class="reviews__block">
+                            <div class="reviews__header">
+                                <img src="images/avatar1.jpg" alt="Аватар пользователя" width="120" height="100">
+                                <div>
+                                    <p class="reviews__name">Иван Колесников</p>
+                                    <p>г.Тюмень</p>
+                                </div>
+                            </div>
+                            <p class="reviews__text">
+                                Кухня мне понравилась, сделали хорошо и быстро. Персонал вежливый.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="reviews__gallery">
+                        <img src="images/reviews-mini-photo4.jpg" alt="Картинка кухни" width="140" height="120">
+                        <img src="images/reviews-mini-photo5.jpg" alt="Картинка кухни" width="140" height="120">
+                        <img src="images/reviews-mini-photo1.jpg" alt="Картинка кухни" width="140" height="120">
+                    </div>
+                </div>
+                <div class="reviews__pagination"></div>
+            </div>
+        </div>
+        <button class="reviews__btn">
+            <img src="images/reviews-arrow.svg" alt="Изображение стрелки">
+        </button>
+        <div class="reviews__images">
+            <div class="reviews__image"></div>
+            <div class="reviews__images-container"></div>
+        </div>
     </div>
 
     <div class="questions" id="questions">
-
+        <div class="questions__content">
+            <p class="questions__title">Остались вопросы ?</p>
+            <button class="questions__button">Вам перезвонить?</button>
+        </div>
     </div>
 
     <footer class="footer">
@@ -171,6 +233,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

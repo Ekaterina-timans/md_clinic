@@ -529,6 +529,156 @@ button {
     }
 }
 
+.reviews {
+    width: 100%;
+    height: 900px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-gray);
+
+    .reviews__container {
+        width: 60%;
+        height: 857px;
+        display: flex;
+        flex-direction: column;
+        background: var(--color-forma);
+        box-shadow: var(--color-shadow);
+        overflow-x: hidden;
+
+        .reviews__content {
+            display: flex;
+            flex-direction: column;
+            padding-inline: 65px 2px;
+
+            .reviews__title {
+                margin: 41px 0 25px 150px;
+                font-size: 25px;
+                text-transform: uppercase;
+            }
+
+            .reviews__slide {
+                display: flex;
+                flex-direction: column;
+                transition: opacity 0.5s ease-in;
+
+                .reviews__feedback {
+                    display: flex;
+                    margin-bottom: 22px;
+    
+                    img {
+                        box-shadow: var(--color-shadow-img);
+                        overflow-x: hidden;
+                    }
+    
+                    .reviews__block {
+                        margin-left: 20px;
+                        width: 252px;
+    
+                        p {
+                            margin-bottom: 5px;
+                        }
+    
+                        .reviews__name {
+                            text-transform: uppercase;
+                        }
+
+                        .reviews__text {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 12;
+                            max-height: 370px;
+                        }
+                    }
+                }
+
+                .reviews__gallery {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-right: 36px;
+                }
+            }
+        }
+    }
+
+    .reviews__btn {
+        background: none;
+        border: none;
+        height: 20%;
+        cursor: pointer;
+        margin: 313px 15px 0;
+    }
+
+    .reviews__images {
+        width: 38%;
+        height: 857px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 35px;
+        background-color: var(--color-forma);
+        box-shadow: var(--color-shadow);
+
+        .reviews__image {
+            max-width: 350px;
+            min-width: 270px;
+            height: 560px;
+            margin: 102px 0 18px;
+
+            img {
+                width: 100%;
+                height: 550px;
+                box-shadow: var(--color-shadow-img);
+            }
+        }
+
+        .reviews__images-container {
+            width: 87%;
+            display: flex;
+            justify-content: space-between;
+
+            img {
+                width: 140px;
+                height: 120px;
+            }
+        }
+    }
+}
+
+.questions {
+    width: 100%;
+    height: 315px;
+    background: url(images/questions.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .questions__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        .questions__title {
+            font-size: 30px;
+            text-transform: uppercase;
+            margin-bottom: 51px;
+        }
+        
+        .questions__button {
+            width: 303px;
+            height: 68px;
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-red);
+            box-shadow: var(--color-shadow);
+        }
+    }
+}
+
 .footer {
     width: 100%;
     height: 367px;
